@@ -2,7 +2,7 @@ export default {
   cms_manual_init: true,
   backend: {
     name: "github",
-    repo: "yourname/your-github-repo-name",
+    repo: "vilaj46/next-netlify-template",
     branch: "main",
   },
   media_folder: "public/img",
@@ -11,23 +11,33 @@ export default {
     {
       name: "pages",
       label: "Pages",
-      files: [
+      label_singular: "Post",
+      description: "The description is a great place for tone setting.",
+      folder: "content/pages",
+      create: true,
+      slug: "{{slug}}",
+      create: true,
+      fields: [
         {
-          label: "Home",
-          name: "home",
-          file: "content/pages/home.md",
-          fields: [
-            {
-              label: "Hero Title",
-              name: "hero_title",
-              widget: "string",
-            },
-            {
-              label: "Hero Description",
-              name: "hero_description",
-              widget: "markdown",
-            },
+          label: "Hero Title",
+          name: "hero_title",
+          widget: "string",
+        },
+        {
+          label: "Hero Description",
+          name: "hero_description",
+          widget: "markdown",
+        },
+        {
+          label: "Slug",
+          name: "slug",
+          required: true,
+          widget: "string",
+          pattern: [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "A slug can have no spaces or special characters",
           ],
+          hint: ">- The post URL (do not include folder or file extension)",
         },
       ],
     },

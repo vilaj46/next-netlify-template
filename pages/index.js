@@ -1,5 +1,6 @@
+// https://jakeprins.com/blog/how-to-implement-netlify-cms-with-next-js
+
 const HomePage = ({ content }) => {
-  console.log(content);
   const { attributes } = content;
   return (
     <>
