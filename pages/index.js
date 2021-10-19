@@ -1,3 +1,5 @@
+import { getAllPosts } from "./api/getAllPosts";
+
 // https://jakeprins.com/blog/how-to-implement-netlify-cms-with-next-js
 
 const HomePage = ({ content }) => {
@@ -18,6 +20,15 @@ const HomePage = ({ content }) => {
  */
 export const getStaticProps = async () => {
   const content = await import(`../content/pages/${"home"}.md`);
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+  ]);
+
   return { props: { content: content.default } };
 };
 

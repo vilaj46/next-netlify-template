@@ -11,7 +11,7 @@ export default {
     {
       name: "pages",
       label: "Pages",
-      label_singular: "Post",
+      label_singular: "Page",
       description: "The description is a great place for tone setting.",
       folder: "content/pages",
       create: true,
