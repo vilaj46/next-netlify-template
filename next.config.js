@@ -4,6 +4,7 @@ module.exports = {
       test: /\.md$/,
       loader: "frontmatter-markdown-loader",
     });
+    config.resolve.fallback = { fs: false };
     return config;
   },
 };

@@ -16,6 +16,7 @@ export default {
       folder: "content/pages",
       create: true,
       slug: "{{slug}}",
+      // slug: "{{year}}-{{month}}-{{day}}_{{slug}}",
       create: true,
       fields: [
         {
