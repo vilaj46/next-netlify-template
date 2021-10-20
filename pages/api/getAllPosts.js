@@ -6,7 +6,7 @@ function join(first, second) {
   return first + second;
 }
 
-const postsDirectory = join(process.cwd(), "content/pages");
+const postsDirectory = join(process.cwd(), "/pages/posts\\[id]");
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
@@ -14,27 +14,29 @@ export function getPostSlugs() {
 
 export function getPostBySlug(slug, fields = []) {
   const realSlug = slug.replace(/\.md$/, "");
-  // const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const fullPath = join(postsDirectory, `/${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  console.log(fileContents);
+  // const { data, content } = matter(fileContents);
 
-  const items = {};
+  // const items = {};
 
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = realSlug;
-    }
-    if (field === "content") {
-      items[field] = content;
-    }
+  // // Ensure only the minimal needed data is exposed
+  // fields.forEach((field) => {
+  //   if (field === "slug") {
+  //     items[field] = realSlug;
+  //   }
+  //   if (field === "content") {
+  //     items[field] = content;
+  //   }
 
-    if (typeof data[field] !== "undefined") {
-      items[field] = data[field];
-    }
-  });
+  //   if (typeof data[field] !== "undefined") {
+  //     items[field] = data[field];
+  //   }
+  // });
 
-  return items;
+  // return items;
+  return {};
 }
 
 export function getAllPosts(fields = []) {

@@ -1,7 +1,9 @@
-import fs from "fs";
-import path from "path";
+// import fs from "fs";
+// import path from "path";
 import { useRouter } from "next/router";
 import Link from "next/link";
+// import markdownToHtml from "../../api/markdownToHtml";
+import { getPostBySlug } from "../../api/getAllPosts";
 
 const Post = () => {
   const router = useRouter();
@@ -27,8 +29,10 @@ const Post = () => {
 };
 
 export async function getStaticProps(context) {
-  const fileToRead = path.join(process.cwd(), "blogs_details.json");
-  console.log(fileToRead);
+  // const fileToRead = path.join(process.cwd(), `${context.params.id}.md`);
+  // const content = await markdownToHtml(fileToRead);
+  const post = getPostBySlug(context.params.id);
+
   return {
     props: {}, // will be passed to the page component as props
   };
