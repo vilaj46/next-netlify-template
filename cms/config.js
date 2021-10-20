@@ -47,7 +47,7 @@ export default {
       label: "Posts",
       label_singular: "Post",
       description: "The description is a great place for tone setting.",
-      folder: "pages/posts",
+      folder: "pages/posts/[id]",
       create: true,
       slug: "{{slug}}",
       // slug: "{{year}}-{{month}}-{{day}}_{{slug}}",
