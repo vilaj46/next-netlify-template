@@ -5,7 +5,7 @@ export default {
     repo: "vilaj46/next-netlify-template",
     branch: "main",
   },
-  media_folder: "public/img",
+  media_folder: "/public/img",
   public_folder: "/img",
   collections: [
     {
