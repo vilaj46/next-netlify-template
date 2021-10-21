@@ -1,5 +1,3 @@
-import "../styles/globals.css";
-
 /**
  * Overrides the global App component to get access
  * to some features like persisting state / global layouts.
