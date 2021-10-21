@@ -1,7 +1,13 @@
-import remark from "remark";
-import html from "remark-html";
+import remarkHtml from "remark-html";
+import remarkParse from "remark-parse";
+import { unified } from "unified";
 
 export default async function markdownToHtml(markdown) {
-  const result = await remark().use(html).process(markdown);
-  return result.toString();
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkHtml)
+    .process(markdown);
+
+  const { value } = result;
+  return value;
 }

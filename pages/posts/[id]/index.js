@@ -1,51 +1,65 @@
-// import fs from "fs";
-// import path from "path";
 import { useRouter } from "next/router";
-import Link from "next/link";
-// import markdownToHtml from "../../api/markdownToHtml";
-import { getPostBySlug } from "../../api/getAllPosts";
+import "tailwindcss/tailwind.css";
+import markdownToHtml from "../../api/markdownToHtml";
+import { getPostBySlug } from "../../api/getAPI";
 
-const Post = () => {
+import Custom404 from "../../404.js";
+
+const Post = ({ data = {} }) => {
   const router = useRouter();
   const { id } = router.query;
+
+  if (Object.keys(data).includes("error") === true) {
+    // Redirect to 404 page.
+    try {
+      router.push("/404");
+    } catch {
+      return <Custom404 />;
+    }
+  }
+
+  function createMarkup(html) {
+    return { __html: html };
+  }
 
   return (
     <>
       <h1>Post: {id}</h1>
-      <ul>
-        <li>
-          <Link href="/post/[id]/[comment]" as={`/post/${id}/first-comment`}>
-            <a>First comment</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/post/[id]/[comment]" as={`/post/${id}/second-comment`}>
-            <a>Second comment</a>
-          </Link>
-        </li>
-      </ul>
+      <div dangerouslySetInnerHTML={createMarkup(data)}></div>
     </>
   );
 };
 
 export async function getStaticProps(context) {
-  // const fileToRead = path.join(process.cwd(), `${context.params.id}.md`);
-  // const content = await markdownToHtml(fileToRead);
-  const post = getPostBySlug(context.params.id);
+  try {
+    const post = getPostBySlug(context.params.id);
+    const { post_body } = post;
+    const data = await markdownToHtml(post_body);
 
-  return {
-    props: {}, // will be passed to the page component as props
-  };
+    return {
+      props: { data }, // will be passed to the page component as props
+    };
+  } catch {
+    return {
+      props: {
+        data: {
+          error: true,
+        },
+      },
+    };
+  }
 }
 
+// Needed by framework but does not provide any value right now.
 export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { id: "1" } }, // See the "paths" section below
-    ],
-    fallback: true,
-    //   fallback: true, false, or 'blocking' // See the "fallback" section below
-  };
+  try {
+    return {
+      paths: [{ params: { id: "1" } }],
+      fallback: true,
+    };
+  } catch {
+    return {};
+  }
 }
 
 export default Post;
