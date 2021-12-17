@@ -8,6 +8,7 @@ import createMarkup from "./api/createMarkup";
 // Components
 import Logo from "../components/Logo";
 import MainImage from "../components/MainImage";
+import PageTitle from "../components/PageTitle";
 
 import logo from "../public/img/logo.png";
 
@@ -27,13 +28,11 @@ const CreatedPages = (props) => {
     alt: "testing alt",
   };
 
-  console.log(props);
-
   return (
     <>
       <Logo image={{ src: logo.src, alt: "Union Gables Inn Logo" }} />
       {mainImage && <MainImage image={image} />}
-      <h1>{pageTitle}</h1>
+      <PageTitle>{pageTitle}</PageTitle>
       <div dangerouslySetInnerHTML={createMarkup(data)}></div>
       <div>aaaa</div>
     </>

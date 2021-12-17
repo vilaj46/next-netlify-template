@@ -8,10 +8,14 @@ module.exports = {
       spacing: {
         192: "48rem",
       },
+      fontFamily: {
+        custom: ["Junicode", "sans-serif"],
+      },
     },
     colors: {
       black: colors.black,
       green: colors.emerald,
+      lightRed: "#AA4465",
     },
   },
   variants: {},
