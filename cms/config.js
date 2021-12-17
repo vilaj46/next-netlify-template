@@ -19,17 +19,18 @@ export default {
       fields: [
         {
           label: "Main Image",
-          name: "main_image",
-          widget: "mainimage",
+          name: "mainImage",
+          widget: "image",
+          choose_url: true,
         },
         {
           label: "Page Title",
-          name: "page_title",
+          name: "pageTitle",
           widget: "string",
         },
         {
           label: "Post Body",
-          name: "post_body",
+          name: "postBody",
           widget: "markdown",
         },
         {

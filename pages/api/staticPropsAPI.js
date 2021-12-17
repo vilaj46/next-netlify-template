@@ -21,11 +21,14 @@ export async function getMarkdownData(context, type) {
     }
 
     const markdown = getMarkdownBySlug(identifier, location);
-    const { post_body } = markdown;
+    const { post_body, main_image, page_title } = markdown;
     const data = await markdownToHtml(post_body);
 
     return {
-      props: { data }, // will be passed to the page component as props
+      props: {
+        ...markdown,
+        data,
+      },
     };
   } catch {
     return {

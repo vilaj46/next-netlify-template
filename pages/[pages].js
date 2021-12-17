@@ -5,21 +5,37 @@ import loadingAPI from "./api/loadingAPI";
 import { getDefaultStaticPaths } from "./api/staticPropsAPI";
 import createMarkup from "./api/createMarkup";
 
-const CreatedPages = ({ data }) => {
+// Components
+import Logo from "../components/Logo";
+import MainImage from "../components/MainImage";
+
+import logo from "../public/img/logo.png";
+
+// const CreatedPages = ({ data, mainImage, pageTitle }) => {
+const CreatedPages = (props) => {
+  const { mainImage, pageTitle, postBody, data } = props;
   const router = useRouter();
   const { asPath } = router;
-
-  console.log(data);
 
   const loaded = loadingAPI(data, router);
   if (loaded !== undefined) {
     return <loaded />;
   }
 
+  const image = {
+    src: mainImage,
+    alt: "testing alt",
+  };
+
+  console.log(props);
+
   return (
     <>
-      <h1>Page: {asPath}</h1>
+      <Logo image={{ src: logo.src, alt: "Union Gables Inn Logo" }} />
+      {mainImage && <MainImage image={image} />}
+      <h1>{pageTitle}</h1>
       <div dangerouslySetInnerHTML={createMarkup(data)}></div>
+      <div>aaaa</div>
     </>
   );
 };

@@ -16,8 +16,7 @@ const HomePage = ({ posts }) => {
   };
   return (
     <>
-      <MainImageComponent image={image} />
-      {/* <h1>Main Page</h1> */}
+      <h1>Main Page</h1>
       {/* <ul>
         {posts.map((post, index) => {
           return (
@@ -33,17 +32,17 @@ const HomePage = ({ posts }) => {
   );
 };
 
-function MainImageComponent({ image }) {
-  return (
-    <div className="w-full h-full lg:h-192 bg-cover bg-center object-cover overflow-hidden">
-      <img
-        src={image.src}
-        alt={image.alt}
-        className="w-full bg-cover bg-center object-cover"
-      />
-    </div>
-  );
-}
+// export function MainImage({ image }) {
+//   return (
+//     <div className="w-full h-full lg:h-192 bg-cover bg-center object-cover overflow-hidden">
+//       <img
+//         src={image.src}
+//         alt={image.alt}
+//         className="w-full bg-cover bg-center object-cover"
+//       />
+//     </div>
+//   );
+// }
 
 export const getStaticProps = async () => {
   const posts = getAllPosts();
