@@ -9,6 +9,20 @@ postBody: >-
 
 
   <!--EndFragment-->
+
+
+
+
+  <!--StartFragment-->
+
+
+  In 1901 wealth merchant, George Crippen, built the Mansion to celebrate his success. Designed by Architect R. Newton Bresee, it rightfully earned its nickname ‘Sunnyside House’, with its many unique features, designed to allow sunshine to cascade through different angles in the house and vary through the seasons.
+
+
+  Today, Union Gables Inn boasts 24 **[one-of-a-kind lodgings](https://uniongablesinnus.smartweb-04.bookassist.com/en/lodging-saratoga-springs/)**, some with private patios, soaking tubs, or modern kitchens and living rooms. The lush Perennial gardens stretch over an acre, with a Romanesque outdoor pool, stone fountains, and patio seating. Discover a quiet haven in the center of Historic Saratoga, where guests can linger on the wraparound porch or relax in the classically-decorated living room after a fresh a la carte breakfast each morning. 
+
+
+  <!--EndFragment-->
 slug: about-us
 custom_text: Custom Text
 ---
