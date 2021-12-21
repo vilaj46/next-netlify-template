@@ -1,3 +1,7 @@
 export default function createMarkup(html) {
-  return { __html: html };
+  try {
+    return { __html: html };
+  } catch {
+    return { __html: html };
+  }
 }

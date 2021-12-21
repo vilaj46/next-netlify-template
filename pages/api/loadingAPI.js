@@ -2,9 +2,9 @@ import Custom404 from "../404";
 
 // Higher order function to determine whether we load the data
 // or change page.
-export default function loadingAPI(data, router) {
+export default function loadingAPI(loadingError, router) {
   try {
-    if (Object.keys(data).includes("error") === true) {
+    if (loadingError) {
       // Redirect to 404 page.
       try {
         router.push("/404");

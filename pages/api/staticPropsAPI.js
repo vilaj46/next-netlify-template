@@ -21,21 +21,23 @@ export async function getMarkdownData(context, type) {
     }
 
     const markdown = getMarkdownBySlug(identifier, location);
-    const { post_body, main_image, page_title } = markdown;
-    const data = await markdownToHtml(post_body);
+    const { postBody } = markdown;
+    const data = await markdownToHtml(postBody);
+
+    console.log(data);
+    console.log(data);
 
     return {
       props: {
         ...markdown,
         data,
+        loadingError: false,
       },
     };
   } catch {
     return {
       props: {
-        data: {
-          error: true,
-        },
+        loadingError: true,
       },
     };
   }
