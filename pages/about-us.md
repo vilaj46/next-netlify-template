@@ -14,9 +14,6 @@ postBody: >-
   ![Billards Table](/img/billards.jpg "Billards Table")
 
 
-  aaa
-
-
   ![Fireplace](/img/fireplace.jpg "Fireplace")
 slug: about-us
 custom_text: Custom Text
