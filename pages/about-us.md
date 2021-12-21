@@ -11,9 +11,12 @@ postBody: >-
   <!--EndFragment-->
 
 
-
-
   ![Billards Table](/img/billards.jpg "Billards Table")
+
+
+
+
+  ![](/img/fireplace.jpg)
 slug: about-us
 custom_text: Custom Text
 ---
