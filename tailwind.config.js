@@ -17,6 +17,7 @@ module.exports = {
       green: colors.emerald,
       darkRed: "#680727",
       lightRed: "#AA4465",
+      superDarkRed: "#3E0E1E",
     },
   },
   variants: {},

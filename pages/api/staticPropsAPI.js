@@ -24,9 +24,6 @@ export async function getMarkdownData(context, type) {
     const { postBody } = markdown;
     const data = await markdownToHtml(postBody);
 
-    console.log(data);
-    console.log(data);
-
     return {
       props: {
         ...markdown,

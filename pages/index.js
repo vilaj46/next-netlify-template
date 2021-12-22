@@ -9,6 +9,9 @@ import nightTimePorch from "../public/img/nightTimePorch.jpg";
 
 // Create custom tj components.
 
+// Hook up Page Title on the html title/tab.
+// Post Body heading tag needs to be a custom component.
+
 const HomePage = ({ posts }) => {
   const image = {
     src: nightTimePorch.src,

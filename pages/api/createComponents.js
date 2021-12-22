@@ -2,7 +2,10 @@ import Link from "next/link";
 
 // Components
 import RedLink from "../../components/RedLink";
+import PageSubTitle from "../../components/PageSubTitle";
 import PageSubImage from "../../components/PageSubImage";
+import PageSubHalfImage from "../../components/PageSubHalfImage";
+import TwoImagesContainer from "../../components/TwoImagesContainer";
 
 /**
  * @param {String} htmlString
@@ -30,6 +33,8 @@ function createComponents(htmlString) {
     // All the children in the body as an array.
     const childrenArray = Array.from(children);
 
+    const combinations = {};
+
     // Iterate through the childrens array.
     const components = childrenArray.map((element, index) => {
       const { childNodes } = element;
@@ -39,9 +44,13 @@ function createComponents(htmlString) {
       const childNodesArray = Array.from(childNodes);
 
       const componentChildren = childNodesArray.map((child) => {
-        const { nodeName } = child;
+        const { nodeName, parentNode } = child;
         if (nodeName === "#text") {
-          return getParagrahText(child);
+          if (parentNode.nodeName === "P") {
+            return getParagrahText(child);
+          } else if (parentNode.nodeName === "H2") {
+            return createSubTitleComponent(child);
+          }
         } else if (nodeName === "A") {
           return createLinkComponent(child);
         } else if (nodeName === "STRONG") {
@@ -59,23 +68,91 @@ function createComponents(htmlString) {
           });
           return createNewComponent(<strong></strong>, strongChildren);
         } else if (nodeName === "IMG") {
+          try {
+            const nextElement = childrenArray[index + 1];
+            const { firstChild } = nextElement;
+            const nextNodeName = firstChild.nodeName;
+            if (nextNodeName === "IMG") {
+              combinations[index] = index + 1;
+            }
+          } catch {
+            // do nothing.
+          }
+
           return createImageComponent(child);
         }
       });
 
       // Getting an error, element type is invalid: expected a string.
       // By making this a function makes it a react component.
-      return () => createNewComponent(<p></p>, componentChildren);
+      const newCompElement = getElementForNewComponent(componentChildren);
+      return () => createNewComponent(newCompElement, componentChildren);
     });
+
+    const combinationKeys = Object.keys(combinations);
+
+    combinationKeys.forEach((k) => {
+      // Component we are going to combine to
+      const component1 = components[k]();
+      const component2 = components[combinations[k]]();
+
+      // Combine the two image components.
+      const c1Src = component1.props.children[0].props.src;
+      const c1Alt = component1.props.children[0].props.alt;
+      const c2Src = component2.props.children[0].props.src;
+      const c2Alt = component2.props.children[0].props.alt;
+
+      const newComponent1 = createImageComponent(
+        { src: c1Src, alt: c1Alt },
+        "half"
+      );
+
+      const newComponent2 = createImageComponent(
+        { src: c2Src, alt: c2Alt },
+        "half"
+      );
+
+      const imageContainer = (
+        <TwoImagesContainer>
+          {newComponent1}
+          {newComponent2}
+        </TwoImagesContainer>
+      );
+
+      // // Replace components[k] with our new div.
+      components[k] = () => imageContainer;
+      // // Remove components[combiations[k]].
+      components.splice(combinations[k], 1);
+    });
+
     return components;
   } catch {
     return [];
   }
 }
 
-function createImageComponent(child) {
+function getElementForNewComponent(children) {
+  const first = children[0];
+  if (typeof first === "string") {
+    return <p></p>;
+  } else {
+    // type is object or our react component.
+    // In this case it is our custom image component.
+    if (first.type.name === "PageSubImage") {
+      return <></>;
+    } else if (first.type.name === "PageSubTitle") {
+      return <></>;
+    }
+  }
+}
+
+function createImageComponent(child, type) {
   const { src, alt } = child;
-  return <PageSubImage src={src} alt={alt} key={randNumber()} />;
+  if (type === undefined) {
+    return <PageSubImage src={src} alt={alt} key={randNumber()} />;
+  } else {
+    return <PageSubHalfImage src={src} alt={alt} key={randNumber()} />;
+  }
 }
 
 /**
@@ -125,6 +202,11 @@ function createLinkComponent(child) {
       {innerText}
     </RedLink>
   );
+}
+
+function createSubTitleComponent(child) {
+  const { nodeValue } = child;
+  return <PageSubTitle key={randNumber()}>{nodeValue}</PageSubTitle>;
 }
 
 /**

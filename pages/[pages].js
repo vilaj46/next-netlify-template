@@ -31,6 +31,7 @@ const CreatedPages = (props) => {
   };
 
   const components = createComponents(data);
+
   return (
     <>
       <Logo image={{ src: logo.src, alt: "Union Gables Inn Logo" }} />
