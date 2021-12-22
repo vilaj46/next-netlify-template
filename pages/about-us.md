@@ -15,6 +15,9 @@ postBody: >-
 
 
   ![Fireplace](/img/fireplace.jpg "Fireplace")
+
+
+  ## Our History
 slug: about-us
 custom_text: Custom Text
 ---
