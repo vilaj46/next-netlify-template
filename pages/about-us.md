@@ -32,9 +32,12 @@ postBody: >-
   <!--EndFragment-->
 
 
-
-
   ![Union Gables in the Sun](/img/uniongablesexteriordaytime.jpg "Union Gables in the Sun")
+
+
+
+
+  ![Union Gables Outdoors Food and Wine](/img/outdoorwineanddinner.jpg "Union Gables Outdoors Food and Wine")
 slug: about-us
 custom_text: Custom Text
 ---
