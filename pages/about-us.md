@@ -32,8 +32,6 @@ postBody: >-
   <!--EndFragment-->
 
 
-
-
   ![Union Gables in Sunlight](/img/uniongablesexteriordaytime.jpg "Union Gables in Sunlight")
 
 
@@ -56,12 +54,6 @@ postBody: >-
 
 
   <!--EndFragment-->
-
-
-  ![Poolside and Lounge Chairs](/img/poolside.jpg "Poolside and Lounge Chairs")
-
-
-  ![Sunny Porch](/img/sunnyporch.jpg "Sunny Porch")
 slug: about-us
 custom_text: Custom Text
 ---
