@@ -1,12 +1,10 @@
-import Link from "next/link";
+import { RedLink } from "../../components/LinkComponents";
+import { PageSubImage } from "../../components/ImageComponents";
+import { PageSubTitle } from "../../components/HeadingComponents";
+import { PageSubHalfImage } from "../../components/ImageComponents";
+import { TwoImagesContainer } from "../../components/ContainerComponents";
 
-// Components
-import RedLink from "../../components/RedLink";
-import PageSubTitle from "../../components/PageSubTitle";
-import PageSubImage from "../../components/PageSubImage";
-import PageSubHalfImage from "../../components/PageSubHalfImage";
-import TwoImagesContainer from "../../components/TwoImagesContainer";
-
+// DELETE THIS FILE!!
 /**
  * @param {String} htmlString
  * @returns Array of react components.
