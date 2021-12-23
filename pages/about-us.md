@@ -30,12 +30,6 @@ postBody: >-
 
 
   <!--EndFragment-->
-
-
-  ![Union Gables in Sunlight](/img/uniongablesexteriordaytime.jpg "Union Gables in Sunlight")
-
-
-  ![Outdoor Dinner and Wine](/img/outdoorwineanddinner.jpg "Outdoor Dinner and Wine")
 slug: about-us
 custom_text: Custom Text
 ---
