@@ -30,6 +30,38 @@ postBody: >-
 
 
   <!--EndFragment-->
+
+
+
+
+  ![Union Gables in Sunlight](/img/uniongablesexteriordaytime.jpg "Union Gables in Sunlight")
+
+
+  ![Outdoor Dinner and Wine](/img/outdoorwineanddinner.jpg "Outdoor Dinner and Wine")
+
+
+  ## Private Events
+
+
+  <!--StartFragment-->
+
+
+  Host your next business meeting or family reunion at Union Gables Inn! Meet in our oversized living room with space for business meetings of 25 people. This room offers complete privacy with pocket doors to seal off from the rest of the mansion so you can focus on the task at hand.
+
+
+  Plan your very own garden party on our grounds! There is space for a 40x40 outdoor tent and 100 people on the lawn. We're happy to assist with off-site caterers to ensure your event runs smoothly. 
+
+
+  Fill out our [Event Inquiry form](https://uniongablesinnus.smartweb-04.bookassist.com/en/event-inquiries/) today.
+
+
+  <!--EndFragment-->
+
+
+  ![Poolside and Lounge Chairs](/img/poolside.jpg "Poolside and Lounge Chairs")
+
+
+  ![Sunny Porch](/img/sunnyporch.jpg "Sunny Porch")
 slug: about-us
 custom_text: Custom Text
 ---
