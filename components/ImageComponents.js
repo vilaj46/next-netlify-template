@@ -34,6 +34,7 @@ export function PageSubHalfImage({ src, alt }) {
   );
 }
 
+// Currently not using this!!
 export function PageSubImage({ src = "", alt = "" }) {
   return <img src={src} alt={alt} className="mr-auto ml-auto mb-4" />;
 }

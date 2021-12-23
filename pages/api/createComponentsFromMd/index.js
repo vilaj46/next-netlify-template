@@ -1,6 +1,7 @@
 // Helper Functions
 import combineChildren from "./combineChildren";
 import combineTwoSubImages from "./combineTwoSubImages";
+import combineMultipleParagraphs from "./combineMultipleParagraphs";
 
 /**
  * @param {String} htmlString
@@ -43,7 +44,9 @@ function createComponentsFromMd(htmlString) {
 
     // Combine only two consecutive PageSubImage components.
     const combinedElements = combineTwoSubImages(elements);
-    return combinedElements;
+    const combineParagraphs = combineMultipleParagraphs(combinedElements);
+
+    return combineParagraphs;
   } catch {
     return [];
   }

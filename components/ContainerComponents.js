@@ -1,7 +1,7 @@
 import "tailwindcss/tailwind.css";
 
 export function CenterContainer({ children }) {
-  return <div className="w-10/12 lg:w-9/12 mr-auto ml-auto">{children}</div>;
+  return <div className="w-10/12 lg:w-6/12 mr-auto ml-auto">{children}</div>;
 }
 
 export function TwoImagesContainer({ children }) {

@@ -28,3 +28,22 @@ export function RegularParagraph({ children }) {
     </p>
   );
 }
+
+export function RegularParagraphHalfMargin({ children }) {
+  // text-lg or text-base not sure which.
+  return (
+    <p className="mb-3 text-lg">
+      {children.map((child) => {
+        if (typeof child !== "string") {
+          const tempChild = {
+            ...child,
+            key: randomNumber(),
+          };
+          return tempChild;
+        } else {
+          return child;
+        }
+      })}
+    </p>
+  );
+}

@@ -40,7 +40,14 @@ export default function combineSubImages(elements) {
     );
 
     temp[k] = newElement;
-    temp.splice(combinations[k], 1);
   });
-  return temp;
+
+  const values = Object.values(combinations);
+  const filtered = temp.filter((element, index) => {
+    if (values.includes(index) === false) {
+      return element;
+    }
+  });
+
+  return filtered;
 }
