@@ -60,6 +60,9 @@ postBody: >-
 
 
   ![Sunny Porch and Shrubbery](/img/sunnyporch.jpg "Sunny Porch and Shrubbery")
+
+
+  ### Award-Winning Accommodations
 slug: about-us
 custom_text: Custom Text
 ---
