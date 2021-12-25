@@ -63,6 +63,29 @@ postBody: >-
 
 
   ## Award-Winning Accommodations
+
+
+  * Voted **Best of the Saratoga Region** for six years in a row as published in the *Saratoga Today* newspaper.
+
+  * Awarded **TripAdvisor Award of Excellence**
+
+  * **Green Leader Hotel**
+
+  * Awarded *bnbfinder.com* **Glorious Gardens Award**
+
+  * *Soroptimist* **Best Garden Award**
+
+
+  ![Lily Pad and Flower](/img/lillypads.jpg "Lily Pad and Flower")
+
+
+  ![Outdoor Garden and Shrubbery](/img/gardenpond.jpg "Outdoor Garden and Shrubbery")
+
+
+  ### Eco Conscious Practices
+
+
+  As a historic mansion of 118 years old, Union Gables Inn strives to practice as much as possible as a Green Hotel. Our eco-conscious practices include energy usage of 100% wind power for all electric, compost of food waste, usage of recycled materials for paper and amenity bottles, and usage of our own spring fed well on the property to water the gardens.
 slug: about-us
 custom_text: Custom Text
 ---
