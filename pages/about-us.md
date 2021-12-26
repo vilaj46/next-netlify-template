@@ -82,7 +82,7 @@ postBody: >-
   ![Outdoor Garden and Shrubbery](/img/gardenpond.jpg "Outdoor Garden and Shrubbery")
 
 
-  ### Eco Conscious Practices
+  ## Eco Conscious Practices
 
 
   As a historic mansion of 118 years old, Union Gables Inn strives to practice as much as possible as a Green Hotel. Our eco-conscious practices include energy usage of 100% wind power for all electric, compost of food waste, usage of recycled materials for paper and amenity bottles, and usage of our own spring fed well on the property to water the gardens.
