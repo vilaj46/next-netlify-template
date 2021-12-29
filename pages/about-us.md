@@ -89,6 +89,9 @@ postBody: >-
 
 
   ###### Please feel free to call us with questions at (518) 584-1558 or see our [Reservation Policies](https://uniongablesinnus.smartweb-04.bookassist.com/en/reservation-policies/).
+
+
+  ![Trip Advisor](/img/tripadvisor_lockup_horizontal_secondary_registered-17354-2.svg "Trip Advisor")
 slug: about-us
 custom_text: Custom Text
 ---
