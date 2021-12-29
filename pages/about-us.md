@@ -88,7 +88,7 @@ postBody: >-
   As a historic mansion of 118 years old, Union Gables Inn strives to practice as much as possible as a Green Hotel. Our eco-conscious practices include energy usage of 100% wind power for all electric, compost of food waste, usage of recycled materials for paper and amenity bottles, and usage of our own spring fed well on the property to water the gardens.
 
 
-  ###### Please feel free to call us with questions at (518) 584-1558 or see our **[Reservation Policies](https://uniongablesinnus.smartweb-04.bookassist.com/en/reservation-policies/)**.
+  ###### Please feel free to call us with questions at (518) 584-1558 or see our [Reservation Policies](https://uniongablesinnus.smartweb-04.bookassist.com/en/reservation-policies/).
 slug: about-us
 custom_text: Custom Text
 ---
