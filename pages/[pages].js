@@ -51,11 +51,11 @@ const CreatedPages = (props) => {
             />
           );
         })}
-        <DarkenSlider
+        {/* <DarkenSlider
           src={nightTimePorch.src}
           mainText="Unlock Exclusive Offers"
           secondaryText="Sign up for our mailing list to receive special promotions at Union Gables Inn."
-        />
+        /> */}
       </CenterContainer>
     </>
   );

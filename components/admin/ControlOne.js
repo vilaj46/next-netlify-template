@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+// https://www.netlifycms.org/docs/custom-widgets/
+
 export default class Control extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     forID: PropTypes.string,
     mainText: PropTypes.node,
+    secondaryText: PropTypes.node,
     classNameWrapper: PropTypes.string.isRequired,
   };
 
@@ -28,14 +31,14 @@ export default class Control extends React.Component {
           mainText={mainText || ""}
           onChange={(e) => onChange(e.target.value)}
         />
-        {/* <input
+        <input
           type="text"
           id={forID}
           className={classNameWrapper}
           placeholder="Secondary Text"
           mainText={secondaryText || ""}
           onChange={(e) => onChange(e.target.value)}
-        /> */}
+        />
       </div>
     );
   }

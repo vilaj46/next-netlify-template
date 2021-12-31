@@ -66,9 +66,9 @@ export default {
           widget: "string",
         },
         {
-          label: "Custom Text",
-          name: "custom_text",
-          widget: "customtext",
+          label: "Custom One",
+          name: "custom_one",
+          widget: "customone",
         },
         {
           label: "Post Body",
