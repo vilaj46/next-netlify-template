@@ -45,9 +45,9 @@ export default {
           hint: ">- The post URL (do not include folder or file extension)",
         },
         {
-          label: "Custom One",
-          name: "custom_one",
-          widget: "customone",
+          label: "Test Widget",
+          name: "test",
+          widget: "test",
         },
       ],
     },
