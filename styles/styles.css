@@ -5,8 +5,28 @@ body {
 
 @font-face {
   font-family: "Junicode";
-  src: url("/fonts/Junicode.ttf");
+  src: url("/fonts/Junicode.ttf"), url("/fonts/Junicode-Bold.ttf"),
+    url("/fonts/Junicode-BoldItalic.ttf"), url("/fonts/Italic.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Droid";
+  src: url("/fonts/DroidSerif/DroidSerif-Regular.ttf"),
+    url("/fonts/DroidSerif/DroidSerif-Bold.ttf"),
+    url("/fonts/DroidSerif/DroidSerif-BoldItalic.ttf"),
+    url("/fonts/DroidSerif/DroidSerif-Italic.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: "Droid";
+  src: url("/fonts/DroidSans.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+} */

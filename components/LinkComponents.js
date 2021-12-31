@@ -1,6 +1,8 @@
 import Link from "next/link";
 import "tailwindcss/tailwind.css";
 
+import randomNumber from "../pages/api/randomNumber";
+
 export function RedLinkDomestic({ children, href }) {
   return (
     <Link href={href}>

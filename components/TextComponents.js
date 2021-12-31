@@ -1,8 +1,8 @@
 import "tailwindcss/tailwind.css";
-import randomNumber from "../pages/api/randomNumber";
 
 /**
- * @param {*} param0
+ * @param {Array} children -
+ * @param {Boolean} smallMargin -
  * @returns
  *
  * Links in the paragraph were getting the key warning.
@@ -10,34 +10,23 @@ import randomNumber from "../pages/api/randomNumber";
  * the key property is read only, I have to create an all
  * together new component and add the random key.
  */
-export function RegularParagraph({ children }) {
-  // text-lg or text-base not sure which.
-  return (
-    <p className="mb-14 text-lg">
-      {children.map((child) => {
-        if (typeof child !== "string") {
-          const tempChild = {
-            ...child,
-            key: randomNumber(),
-          };
-          return tempChild;
-        } else {
-          return child;
-        }
-      })}
-    </p>
-  );
-}
+export function RegularParagraph({
+  children,
+  smallMargin = false,
+  center = false,
+}) {
+  // If given smallMargin prop, the next element is also a parapraph.
+  const marginBottom = smallMargin ? "mb-3" : "mb-14";
 
-export function RegularParagraphHalfMargin({ children }) {
-  // text-lg or text-base not sure which.
+  const textAlign = center ? "text-center" : "";
   return (
-    <p className="mb-3 text-lg">
+    <p
+      className={`${marginBottom} ${textAlign} text-base leading-loose font-droid text-lightBlack`}
+    >
       {children.map((child) => {
         if (typeof child !== "string") {
           const tempChild = {
             ...child,
-            key: randomNumber(),
           };
           return tempChild;
         } else {

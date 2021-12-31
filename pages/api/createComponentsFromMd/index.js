@@ -1,7 +1,6 @@
-// Helper Functions
-import combineChildren from "./combineChildren";
-import combineTwoSubImages from "./combineTwoSubImages";
-import combineMultipleParagraphs from "./combineMultipleParagraphs";
+import createChildComponent from "./createChildComponent";
+
+import setSkip from "./setSkip";
 
 /**
  * @param {String} htmlString
@@ -25,28 +24,20 @@ function createComponentsFromMd(htmlString) {
 
     // Selects the body's children
     const { children } = doc.children[0].children[1];
-
-    // All the children in the body as an array.
     const childrenArray = Array.from(children);
 
-    // Iterate through the childrens array.
-    const elements = childrenArray.map((element) => {
-      const { childNodes } = element;
+    // Used to skip over half images.
+    let skip = -1;
 
-      const newChild = combineChildren(childNodes);
-
-      // <p> elements can be anything on the inside.
-      // For this case, <p> elements hold img elements.
-      // We have to dive into each <p> element and assume it is not text.
-
-      return newChild;
+    const components = childrenArray.map((child, index) => {
+      if (skip === index) {
+        return null;
+      }
+      const childComponent = createChildComponent(child, index, childrenArray);
+      skip = setSkip(childComponent, index);
+      return childComponent;
     });
-
-    // Combine only two consecutive PageSubImage components.
-    const combinedElements = combineTwoSubImages(elements);
-    const combineParagraphs = combineMultipleParagraphs(combinedElements);
-
-    return combineParagraphs;
+    return components;
   } catch {
     return [];
   }

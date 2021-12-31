@@ -7,12 +7,12 @@ import nightTimePorch from "../public/img/nightTimePorch.jpg";
 // https://jakeprins.com/blog/how-to-implement-netlify-cms-with-next-js
 // https://github.com/vercel/next.js/blob/canary/examples/blog-starter/pages/index.js
 
-// Create custom tj components.
+// Figure out where errors come from the netlify cms.
+// STRONG component is alittle sketchy right now.
+// Fragmented sections also bizzaro
 
-// Hook up Page Title on the html title/tab.
-// Post Body h1 needs to be a custom component.
-// Clean up createComponents, make it a real api.
-// Combine components there are too many, ie  PageSubTitle and PageTitle.
+// DISPLAY H6 is a centered paragraph somewhere?
+// Trip Advisor needs to be in the name
 
 const HomePage = ({ posts }) => {
   const image = {
@@ -36,18 +36,6 @@ const HomePage = ({ posts }) => {
     </>
   );
 };
-
-// export function MainImage({ image }) {
-//   return (
-//     <div className="w-full h-full lg:h-192 bg-cover bg-center object-cover overflow-hidden">
-//       <img
-//         src={image.src}
-//         alt={image.alt}
-//         className="w-full bg-cover bg-center object-cover"
-//       />
-//     </div>
-//   );
-// }
 
 export const getStaticProps = async () => {
   const posts = getAllPosts();

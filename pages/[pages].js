@@ -9,12 +9,14 @@ import createComponentsFromMd from "./api/createComponentsFromMd";
 
 // Components
 import { Logo } from "../components/ImageComponents";
+import DarkenSlider from "../components/DarkenSlider";
 import { MainImage } from "../components/ImageComponents";
 import { PageTitle } from "../components/HeadingComponents";
 import { CenterContainer } from "../components/ContainerComponents";
 
 // Images
 import logo from "../public/img/logo.png";
+import nightTimePorch from "../public/img/nightTimePorch.jpg";
 
 const CreatedPages = (props) => {
   const { mainImage, pageTitle, data, loadingError } = props;
@@ -49,6 +51,11 @@ const CreatedPages = (props) => {
             />
           );
         })}
+        <DarkenSlider
+          src={nightTimePorch.src}
+          mainText="Unlock Exclusive Offers"
+          secondaryText="Sign up for our mailing list to receive special promotions at Union Gables Inn."
+        />
       </CenterContainer>
     </>
   );

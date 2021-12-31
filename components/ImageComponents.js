@@ -29,12 +29,23 @@ export function PageSubHalfImage({ src, alt }) {
     <img
       src={src}
       alt={alt}
-      className="mr-auto ml-auto w-full lg:w-5/12 mb-4"
+      className="mr-auto lg:mr-0 ml-auto lg:ml-0 w-full lg:w-48 mb-4 lg:mb-0"
     />
   );
 }
 
-// Currently not using this!!
 export function PageSubImage({ src = "", alt = "" }) {
   return <img src={src} alt={alt} className="mr-auto ml-auto mb-4" />;
+}
+
+export function TripAdvisor({ src = "", alt = "" }) {
+  return (
+    <a
+      href="https://www.tripadvisor.com/Hotel_Review-g48562-d80181-Reviews-Union_Gables_Inn-Saratoga_Springs_New_York.html"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img src={src} alt={alt} className="mb-4 w-4/12" />
+    </a>
+  );
 }
