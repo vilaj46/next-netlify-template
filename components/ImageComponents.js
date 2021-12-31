@@ -40,12 +40,14 @@ export function PageSubImage({ src = "", alt = "" }) {
 
 export function TripAdvisor({ src = "", alt = "" }) {
   return (
-    <a
-      href="https://www.tripadvisor.com/Hotel_Review-g48562-d80181-Reviews-Union_Gables_Inn-Saratoga_Springs_New_York.html"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <img src={src} alt={alt} className="mb-4 w-4/12" />
-    </a>
+    <div className="w-1/3">
+      <a
+        href="https://www.tripadvisor.com/Hotel_Review-g48562-d80181-Reviews-Union_Gables_Inn-Saratoga_Springs_New_York.html"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img src={src} alt={alt} className="mb-4" />
+      </a>
+    </div>
   );
 }
