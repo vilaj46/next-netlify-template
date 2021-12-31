@@ -29,7 +29,7 @@ function Darken() {
 function CenterMainText({ text }) {
   return (
     <div
-      className="absolute z-20 transform transition top-1/2 
+      className="absolute z-20 transform transition-all duration-500 top-1/2 
                  -translate-y-1/2 group-hover:-translate-x-thousand"
     >
       <div className="relative bg-superDarkRedOpac p-2">
@@ -43,11 +43,11 @@ function CenterMainText({ text }) {
     </div>
   );
 }
-
+// Combine the two of these to eliminate some class bloat.
 function CenterSecondaryText({ text }) {
   return (
     <div
-      className="absolute z-20 transition transform 
+      className="absolute z-20 transition-all duration-500 transform 
       top-1/2 -translate-y-1/2 translate-x-thousand group-hover:-translate-x-0"
     >
       <div className="relative z-30">
