@@ -43,6 +43,7 @@ function CenterMainText({ text }) {
     </div>
   );
 }
+
 // Combine the two of these to eliminate some class bloat.
 function CenterSecondaryText({ text }) {
   return (

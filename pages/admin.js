@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
 import config from "../cms/config";
 
-import CustomTextPreview from "../components/CustomTextPreview";
-import CustomTextControl from "../components/CustomTextControl";
+import CustomTextPreview from "../components/admin/CustomTextPreview";
+import CustomTextControl from "../components/admin/CustomTextControl";
 
 const CMS = dynamic(
   () =>
