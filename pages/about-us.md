@@ -4,4 +4,5 @@ pageTitle: About Us
 postBody: Body
 slug: about-us
 custom_one: "456"
+custom: "6"
 ---
