@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
 export default class Control extends React.Component {
   static propTypes = {
@@ -15,7 +15,7 @@ export default class Control extends React.Component {
 
   render() {
     const { forID, value, onChange, classNameWrapper } = this.props;
-
+    console.log(value);
     return (
       <input
         type="text"
